@@ -42,7 +42,7 @@ spec: #inside your deployment we need to provide spec how this deployment api wi
           - name: mysql-persistent-volume 
             persistentVolumeClaim:
             #mapped to pvc claim we created earlier
-              claimName: task-pv-claim1
+              claimName: task-pv-claimpr
           - name: usermgmt-dbscript
             configMap: 
               name: usermgmt-dbcreation-script

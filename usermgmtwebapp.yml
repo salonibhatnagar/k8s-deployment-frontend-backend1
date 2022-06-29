@@ -26,15 +26,15 @@ spec: #inside your deployment we need to provide spec how this deployment api wi
               - containerPort: 8080
                 name: mysql 
             env:
-              - name: DB_HOSTNAME
-                value: 192.168.213.112
-              - name: DB_PORT
+              - name: MYSQL_HOST
+                value: 192.168.213.123
+              - name: MYSQL_PORT
                 value: "3306"
-              - name: DB_NAME 
-                value: "webappdb"
-              - name: DB_USERNAME
+              - name: MYSQL_DATABASE 
+                value: "userdb"
+              - name: MYSQL_USER
                 value: "root"
-              - name: DB_PASSWORD
+              - name: MYSQL_ROOT__PASSWORD
                 valueFrom:
                   secretKeyRef:
                 #this two value come from mysqlsecret.yml 
