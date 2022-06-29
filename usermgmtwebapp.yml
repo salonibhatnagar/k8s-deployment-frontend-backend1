@@ -21,13 +21,13 @@ spec: #inside your deployment we need to provide spec how this deployment api wi
         
         containers:
           - name: usermgmt-webapp  
-            image: salonidockerhub/userapplication
+            image: salonidockerhub/saloniuserapp
             ports:
               - containerPort: 8080
                 name: mysql 
             env:
               - name: DB_HOSTNAME
-                value: 192.168.213.108
+                value: 192.168.213.112
               - name: DB_PORT
                 value: "3306"
               - name: DB_NAME 
@@ -38,7 +38,7 @@ spec: #inside your deployment we need to provide spec how this deployment api wi
                 valueFrom:
                   secretKeyRef:
                 #this two value come from mysqlsecret.yml 
-                    name: my-db-secret #this is the name of the secret
+                    name: my-db-secret #this is .the name of the secret
                     key: db-password #
                   
 
